@@ -2,8 +2,8 @@ import React from 'react';
 import {render,screen} from '@testing-library/react'
 import App from './App'
 
-test('it render',()=>{
+test('render App component',()=>{
      render(<App />)
-     const container = screen.getByText('Stop Watch')
-     expect(container).toBeInTheDocument()
+     const divElement = screen.getByTitle('div')
+     expect(divElement).toBeInTheDocument()
 })
