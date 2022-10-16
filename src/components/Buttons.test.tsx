@@ -19,12 +19,14 @@ test('render Buttons component',()=>{
             
   const divElement = screen.getByRole('div')          
  const buttonElements = screen.getAllByRole('button') 
+ const resetButton = screen.getByText('Reset')
+ const startButton = screen.getByText('Start')
  
+ expect(resetButton).toBeInTheDocument()
+ expect(startButton).toBeInTheDocument()
  expect(divElement).toBeInTheDocument()
- 
  expect(buttonElements.length).toEqual(2)
  
 })
-
 
 

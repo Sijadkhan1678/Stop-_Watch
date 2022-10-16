@@ -2,12 +2,8 @@ import React,{FC,useState} from 'react';
 import './App.css';
 import Timer from './components/Timer'
 import Buttons from './components/Buttons'
-type Time = {
-  seconds: number
-  minutes: number
-  hours: number
-  isStart: boolean
-}
+import {Time} from './types/index'
+
 const App: FC = () => {
   let [time,setTime] = useState <Time> ({
       seconds: 0,

@@ -1,11 +1,6 @@
 import React,{FC} from 'react';
+import {ButtonsProps} from '../types/index'
 
-type ButtonsProps = {
-  startWatch: ()=> void
-  stopWatch: ()=>void
-  resetWatch: ()=> void
-  isStart: boolean
-}
 const Buttons:FC<ButtonsProps> = ({startWatch,stopWatch,resetWatch,isStart}) =>{
   return (
     <div role='div' className='button-container'>

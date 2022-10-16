@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  color: white;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -11,14 +12,37 @@ body {
   align-items: center;
 }
 .container{
-  background-color: yellow;
+ background-image: linear-gradient(90deg,#00EAFF,#6713D2);
   width: 100%;
+  padding: 2rem 0.6rem;
+  border-radius: 0.6rem;
+  
+  
 }
 .timer-container{
-  background-color: red;
+  background-image: linear-gradient(90deg,#FCCF31,#F55555);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  text-align: center;
+}
+.timer-container span{
+ /* text-align:center;*/
+  margin-left: 0.5rem;
+  margin-top: 2rem;
 }
 .button-container{
   
 }
+.button-container button {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 2.4rem 2.4rem;
+  border: 0;
+  margin: 3rem 2rem;
+  background-image: linear-gradient(90deg,#FF96F9,#C32BAC);
+  border-radius: 50%;
+}
+

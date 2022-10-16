@@ -3,16 +3,8 @@ import React, {
   FC
 } from 'react';
 import Buttons from './Buttons'
-type TimerProps = {
-  // seconds:number
-  //minutes: number
-  //hours:number
-  time: {
-    seconds: number,
-    minutes: number,
-    hours: number
-  }
-}
+import {TimerProps} from '../types/index'
+
 const Timer: FC <TimerProps> = ({
   time: {
     seconds, minutes, hours
@@ -22,7 +14,7 @@ const Timer: FC <TimerProps> = ({
     <Fragment>
     <div role='div' className='timer-container'>
    <div role='div'>
-      <h1>{hours > 9 ?  hours : ' 0'+ hours }</h1>
+      <h1>{hours > 9 ?  hours : '0'+ hours }</h1>
       <span role='span'>Hours </span>
     </div>
    <div role='div'>
@@ -30,7 +22,7 @@ const Timer: FC <TimerProps> = ({
       <span role='span'> Minutes </span>
     </div>
    <div role='div'>
-      <h1>{seconds > 9 ? ': '+ seconds: ': 0 '+ seconds }</h1>
+      <h1>{seconds > 9 ? ': '+ seconds: ': 0'+ seconds }</h1>
       <span role='span'>Seconds</span>
     </div>
     </div>
