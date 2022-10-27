@@ -3,7 +3,6 @@ export type Time = {
   seconds: number
   minutes: number
   hours: number
-  isStart: boolean
 }
 
 export type TimerProps = {
@@ -15,7 +14,7 @@ export type TimerProps = {
 }
 export type ButtonsProps = {
   startWatch: ()=> void
-  stopWatch: ()=>void
+  stopWatch: ()=> void
   resetWatch: ()=> void
   isStart: boolean
 }

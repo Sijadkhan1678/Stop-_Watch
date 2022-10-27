@@ -1,13 +1,8 @@
-import React, {
-  Fragment,
-  FC
-} from 'react';
-import Buttons from './Buttons'
+import React, { Fragment ,FC } from 'react';
 import {TimerProps} from '../types/index'
 
-const Timer: FC <TimerProps> = ({
-  time: {
-    seconds, minutes, hours
+
+const Timer: FC <TimerProps> = ({time: { seconds, minutes, hours
   }}) => {
 
   return (

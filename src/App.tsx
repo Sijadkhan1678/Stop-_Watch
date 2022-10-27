@@ -5,21 +5,22 @@ import Buttons from './components/Buttons'
 import {Time} from './types/index'
 
 const App: FC = () => {
-  let [time,setTime] = useState <Time> ({
+  const [time,setTime] = useState <Time> ({
       seconds: 0,
       minutes: 0,
       hours: 0,
-      isStart: false
     })
-  const [start,setStart] = useState <any> ()
-  let {
-    seconds,
-    minutes,
-    hours,
-    isStart
-  } = time
+  const [ isStart,setIsStart ] = useState<boolean>(false)  
+  
+  const [interval,setInt] = useState < any > ()
+  
+  let { seconds , minutes , hours } = time
+  
   const startWatch = () => {
-    setStart(setInterval(()=> {
+    
+    setIsStart(true)
+    
+    setInt(setInterval(()=> {
       if (seconds === 60) {
         minutes++
         seconds = 0
@@ -29,37 +30,45 @@ const App: FC = () => {
         minutes = 0
       }
 
-      setTime({
-        seconds: seconds++, minutes: minutes, hours: hours, isStart: true
+     setTime({
+        seconds: seconds++,
+        minutes: minutes,
+        hours: hours
       })
 
-    },
-      1000))
+    }, 1000))
   }
   const stopWatch = () => {
-    clearInterval(start)
-    setTime({
-      ...time, isStart: false
-    })
+    
+    setIsStart(false)
+    clearInterval(interval)
+    
   }
   const resetWatch = () => {
-    clearInterval(start)
+    
+    clearInterval(interval)
+    
     setTime({
       seconds: 0,
       minutes: 0,
       hours: 0,
-      isStart: false
+      
     })
   }
-  //console.log('seconds',seconds)
+  
   return (
-    <div title='div' className='container'>
+    <div title='div' 
+         className='container'>
+         
       <Timer time={time} />
+      
       <Buttons
             startWatch={startWatch}
             stopWatch={stopWatch}
             resetWatch={resetWatch} 
-            isStart={isStart}/>
+            isStart={isStart}
+           />
+           
     </div>
   );
 }

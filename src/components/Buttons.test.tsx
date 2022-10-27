@@ -8,7 +8,7 @@ test('render Buttons component',()=>{
   const startWatch = () => {}
   const stopWatch = () => {}
   const resetWatch = () => {}
- let isStart = false
+  let isStart = false
  
   render(<Buttons
             startWatch={startWatch}
