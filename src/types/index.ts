@@ -1,5 +1,6 @@
 
 export type Time = {
+  milliSeconds:number
   seconds: number
   minutes: number
   hours: number
@@ -7,6 +8,7 @@ export type Time = {
 
 export type TimerProps = {
   time: {
+    milliSeconds:number
     seconds: number
     minutes: number
     hours: number

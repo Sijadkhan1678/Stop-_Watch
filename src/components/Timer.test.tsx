@@ -3,6 +3,7 @@ import Timer from './Timer'
 
 test('render Timer component',()=>{
   const time = {
+    milliSeconds:0,
     seconds:0,
     minutes:0,
     hours:0
